@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>👋 Hi, I'm Sravanth Kumar</h1>
+            <p>AI & Web Dev Enthusiast 🚀 | Building Innovative Solutions 💡</p>
+            <div class="hero-buttons">
+                <a href="/projects/" class="btn">💼 View My Projects</a>
+                <a href="/resume/" class="btn">📄 Download Resume</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'images/profile.jpg' %}" alt="Sravanth Kumar">
+        </div>
+    </div>
+</section>
+
+    <!-- About Me Summary -->
+    <section class="home-about">
+        <h2>🙋‍♂️ About Me</h2>
+        <p>I’m a B.Tech student in Artificial Intelligence & Data Science passionate about creating efficient AI-powered applications and modern web experiences. Currently exploring opportunities to contribute in innovative AI projects and web development teams.</p>
+        <a href="/about/" class="btn">Learn More About Me</a>
+    </section>
+
+    <!-- Skills Snapshot -->
+    <section class="home-skills">
+        <h2>🛠️ My Key Skills</h2>
+        <div class="skill-tags">
+            <span>Python 🐍</span>
+            <span>JavaScript ✨</span>
+            <span>MongoDB 🍃</span>
+            <span>React ⚛️</span>
+            <span>Prompt Engineering 📝</span>
+        </div>
+        <a href="/skills/" class="btn">See All Skills</a>
+    </section>
+
+    <!-- Highlighted Projects -->
+    <section class="home-projects">
+        <h2>💼 Featured Projects</h2>
+        <div class="featured-projects">
+            <div class="project-card">
+                <h3>MERN Stack AI Chatbot 🤖</h3>
+                <p>Responsive AI chatbot using React, Node.js, Express, MongoDB integrated with OpenAI API.</p>
+                <a href="/projects/">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>AI Workflow Automation with n8n ⚙️</h3>
+                <p>Automated workflows with AI Agents using OpenAI API & n8n platform for process automation.</p>
+                <a href="/projects/">View Project</a>
+            </div>
+        </div>
+        <a href="/projects/" class="btn">See All Projects</a>
+    </section>
+
+    <!-- Contact Call to Action -->
+    <section class="home-contact">
+        <h2>📬 Get In Touch</h2>
+        <p>Have an idea? Want to collaborate? Feel free to reach out!</p>
+        <a href="/contact/" class="btn">Contact Me</a>
+    </section>
+{% endblock %}

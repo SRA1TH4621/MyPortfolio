@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Alert Modal Popup -->
+    <div id="welcome-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>🚀 Welcome to my AI-powered Portfolio! 👨‍💻✨</h2>
+        <p>Let's build the future together! 💡</p>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/">🏠 Home</a>
+        <a href="/about/">🙋‍♂️ About</a>
+        <a href="/projects/">💼 Projects</a>
+        <a href="/skills/">🛠️ Skills</a>
+        <a href="/resume/">📄 Resume</a>
+        <a href="/contact/">✉️ Contact</a>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>© 2025 Sravanth Kumar. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal Script -->
+    <script>
+        window.onload = function() {
+            var modal = document.getElementById("welcome-modal");
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
